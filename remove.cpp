@@ -36,6 +36,11 @@ int main()
 	cout << endl;
 	cout << "list size:" << 
 		distance(col.begin(), newend) << endl;
+		
+	//真正删除元素的方法，调用容器本身的erase删除区间
+	col.erase(newend, col.end());
+	
+	print("after earse:", col);
 	return 0;
 }
 输出：注意最后的4、5 2个元素
@@ -44,3 +49,4 @@ after remove:: 5 4 2 1 0 0 1 2 4 5 4 5
 rigth cout: 
 5 4 2 1 0 0 1 2 4 5 
 list size:10
+after earse:: 5 4 2 1 0 0 1 2 4 5 
