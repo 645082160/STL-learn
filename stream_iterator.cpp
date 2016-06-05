@@ -3,6 +3,7 @@ stl有3种迭代器适配器
 1、插入
 2、流
 3、反向
+注意：他们本质是迭代器，并不是容器！
 */
 #include <iostream>
 #include <vector>
