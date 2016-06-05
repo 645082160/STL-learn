@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 	{
 		col.push_front(i);
 	}
-	//注意调用方式，Print()
+	//注意调用方式，Print()会产生一个临时对象，并调用operator()运算符
 	for_each(col.begin(), col.end(), Print());
 	
 	return 0;
