@@ -1,6 +1,7 @@
 /*
 以下演示了multiset的find，以及遍历已找到元素的方法。
 find+count
+另外一种使用lower_bound和upper_bound的方法达到了同样的效果
 */
 #include <iostream>
 #include <set>
@@ -38,5 +39,23 @@ int main(int argc, char* argv[])
 		cout << "no elem found" << endl;
 	}
 	
+	
+	cout << "second find method" << endl;
+	//second find method
+	multiset<int>::iterator begin = mset.lower_bound(1);
+	multiset<int>::iterator end = mset.upper_bound(1);
+	
+	if(begin == end)
+	{
+		cout << "no elem found" << endl;
+	}
+	else
+	{
+		while(begin != end)
+		{
+			cout << *begin << endl;
+			++begin;
+		}
+	}
 	return 0;
 }
